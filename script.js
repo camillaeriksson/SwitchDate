@@ -75,9 +75,21 @@ function printMonth() {
 }
 
 function printTime() {
-    const date = new Date();
-    document.getElementById("time").innerHTML = date.getHours() + ":" + date.getMinutes();
-}
+        var realTime = new Date();
+        var hour = realTime.getHours();
+        var minute = realTime.getMinutes();
+        var seconds = realTime.getSeconds();
+        minute = checkTime(minute);
+        seconds = checkTime(seconds);
+        document.getElementById('time').innerHTML =
+        hour + ":" + minute + ":" + seconds;
+        setTimeout(printTime, 500);
+      }
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+      }
+
 
 function printDate() {
     const date = new Date();
