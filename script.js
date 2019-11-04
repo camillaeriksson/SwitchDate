@@ -1,6 +1,7 @@
 printDay();
 printMonth();
 printTime();
+printDate();
 
 function printDay() {
     const date = new Date();
@@ -73,7 +74,12 @@ function printMonth() {
     }
 }
 
-function printTime () {
+function printTime() {
     const date = new Date();
     document.getElementById("time").innerHTML = date.getHours() + ":" + date.getMinutes();
+}
+
+function printDate() {
+    const date = new Date();
+    document.getElementById("date").innerHTML = date.getDate();
 }

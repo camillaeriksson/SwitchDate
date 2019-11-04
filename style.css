@@ -16,6 +16,6 @@ p {
     margin: 0;
 }
 
-#day, #month, #time {
+#day, #month, #time, #date {
     font-weight: bolder;
 }
